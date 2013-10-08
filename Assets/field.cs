@@ -13,7 +13,7 @@ public class field : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+		
 		Vector3 VecRoll;
 		Vector3 Roll;
 		VecRoll = Input.acceleration;
@@ -46,5 +46,23 @@ public class field : MonoBehaviour {
 		}
 		
 		Physics.gravity = Roll;
+		
+		if(1 == Input.touchCount)
+		{
+			Touch touch = Input.GetTouch(0);
+			switch (touch.phase)
+            {
+                case TouchPhase.Moved:
+ 
+					float fRollY;
+					//移動量に応じて角度計算
+					VecRoll.y = -touch.deltaPosition.y * 10;
+		
+		            //回転
+					transform.Rotate(0.0f,VecRoll.y,0.0f);
+	
+					break;
+			}
+   		}
 	}
 }
