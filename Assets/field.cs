@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class field : MonoBehaviour {
+public class Field : MonoBehaviour {
 	
 	float fSlope; 
 	
