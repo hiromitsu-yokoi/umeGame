@@ -3,7 +3,7 @@ using System.Collections;
 
 public class field : MonoBehaviour {
 	
-	static float fSlope; 
+	float fSlope; 
 	
 	// Use this for initialization
 	void Start () {
@@ -51,18 +51,15 @@ public class field : MonoBehaviour {
 		{
 			Touch touch = Input.GetTouch(0);
 			switch (touch.phase)
-            {
-                case TouchPhase.Moved:
- 
-					float fRollY;
-					//移動量に応じて角度計算
-					VecRoll.y = -touch.deltaPosition.y * 10;
+	        {
+	            case TouchPhase.Moved:
 		
 		            //回転
-					transform.Rotate(0.0f,VecRoll.y,0.0f);
-	
-					break;
+					transform.Rotate(0.0f,
+									 -touch.deltaPosition.x * 0.5f,
+									 0.0f);
+				break;	
 			}
-   		}
+		}
 	}
 }

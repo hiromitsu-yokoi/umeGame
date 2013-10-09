@@ -1,8 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\field.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\MainCamera.cs">
     <Files>
-      <File FileName="Assets\field.cs" Line="59" Column="1" />
+      <File FileName="Assets\Goal.cs" Line="1" Column="1" />
+      <File FileName="Assets\field.cs" Line="1" Column="1" />
+      <File FileName="Assets\MainCamera.cs" Line="44" Column="58" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
