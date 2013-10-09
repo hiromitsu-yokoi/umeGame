@@ -17,5 +17,12 @@ public class ball : MonoBehaviour {
 											 5.0f,
 											 rigidbody.velocity.z);
 		}
+
+		// gameover
+		if(transform.position.y < -5.0f)
+		{
+			Application.LoadLevel("result");
+		}	
+		
 	}
 }
