@@ -41,7 +41,15 @@ public class MainCamera : MonoBehaviour {
 			}else if(touch0.phase == TouchPhase.Moved ||
 					 touch1.phase == TouchPhase.Moved )
 	        {	
+				float fLastRange;
+				fLastRange = fCameraRange;
 				fCameraRange += (fLastTouchRange - fTouchRange) * 0.01f;
+				
+				if(	fCameraRange < 20 ||
+					fCameraRange > 50)
+				{
+					fCameraRange = fLastRange;					
+				}
 				
 				vecCameraPos.x = 0.0f;
 				vecCameraPos.y = Mathf.Sin(fAngle) * fCameraRange;
